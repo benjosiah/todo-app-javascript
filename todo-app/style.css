@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: blueviolet;
+    background-color: #9a17b5;
 
 }
 
@@ -83,7 +83,7 @@ header nav div ul li input[type=search]{
 }
 
 .container{
-    margin: auto;
+    margin: 20px auto;
     width:90%;
     align-items: center;
 }

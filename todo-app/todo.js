@@ -10,17 +10,17 @@ var todos= [
         'done':true,
     },
     {
-        "name": "eat",
+        "name": "read",
         "Due date":"12/02/2021",
         'done':false,
     },
     {
-        "name": "eat",
+        "name": "play",
         "Due date":"12/02/2021",
         'done':false,
     },
     {
-        "name": "eat",
+        "name": "pray",
         "Due date":"12/02/2021",
         'done':false,
     }
@@ -31,17 +31,14 @@ var todos= [
 var show = document.getElementsByClassName('show');
 var todo = document.getElementById('todo');
 var form = document.getElementById('form');
+// var checkbox = document.getElementById('check');
+
+// show[0].children.forEach(list=>{
+//     console.log(list[0].children[0]);
+// })
+
 todos.forEach(element=> {
-    var div = document.createElement("div");
-    div.className = "list";
-    var check = document.createElement("input");
-    check.type= "checkbox";
-    check.className= "done";
-    check.checked=element.done
-    var ls = document.createTextNode(element.name)
-    div.appendChild(check)
-    div.appendChild(ls);
-    show[0].appendChild(div);
+    showTodos(element)
 });
 
 form.addEventListener("submit", function(e){
@@ -50,17 +47,7 @@ form.addEventListener("submit", function(e){
         "name":todo.value
     }
     todos.push(now.name);
-
-    var div = document.createElement("div");
-    var check = document.createElement("input");
-    check.type= "checkbox"
-    check.className= "done"
-    check.value=now.done
-    div.className = "list";
-    var ls = document.createTextNode(now.name)
-    div.appendChild(check);
-    div.appendChild(ls);
-    show[0].appendChild(div);
+    showTodos(now);
     todo.value=""
     
 });
@@ -68,5 +55,27 @@ form.addEventListener("submit", function(e){
 todo.addEventListener("blur", event=>{
     todo.value="";
 })
+
+//functions 
+
+function showTodos(data){
+    var div = document.createElement("div");
+    div.className = "list";
+    var check = document.createElement("input");
+    check.type= "checkbox";
+    check.id= "check";
+    check.addEventListener('input', e=>{
+        data.done=check.checked
+    })
+    check.className= "done";
+    check.checked=data.done
+    var ls = document.createTextNode(data.name)
+    div.appendChild(check)
+    div.appendChild(ls);
+    show[0].appendChild(div);
+
+  
+}
+
 
 

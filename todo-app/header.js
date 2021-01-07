@@ -2,6 +2,12 @@ var burger = document.getElementById('burger');
 var ul = document.getElementsByClassName('ul');
 var tab = document.getElementsByClassName('tab');
 var menue = document.getElementById('menue');
+var bg = document.getElementById("bg");
+var body = document.querySelector("body");
+
+bg.addEventListener("input", e=>{
+    body.style.background=bg.value;
+})
 
 burger.addEventListener("click", function(e){
     if (tab.length>0 && ul.length>0) {
