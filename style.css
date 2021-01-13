@@ -110,6 +110,7 @@ header nav div ul li input[type=search]{
     max-width: 470px;
     padding-left: 10px;
     border-radius:5px;
+    position: relative;
 
 
 
@@ -148,6 +149,27 @@ form .todo{
     border-radius:5px;
 }
 
+.clear{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    right: 0px;
+    top:0px;
+    font-family:sans-serif;
+    padding: 5px;
+    font-size: xx-small;
+    text-align: center;
+    cursor: pointer;
+
+}
+.clear:hover{
+    background-color: rgb(179, 177, 177);
+
+
+}
 /*tablet veiw*/
 @media screen and (max-width: 1175px){
     header nav ul{
