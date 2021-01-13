@@ -38,11 +38,36 @@ var todo = document.getElementById('todo');
 var form = document.getElementById('form');
 var checkbox = document.getElementsByClassName('list');
 var list = show[0].children;
+var check_all= document.getElementById('check-all');
+var checked_all = false;
 
 
 
 
-
+check_all.addEventListener('click', e=>{
+    let a=0;
+    if (checked_all==false) {
+        while (a<todos.length) {
+            if (list[a].children[0].id = todos[a].id) {
+                todos[a].done=true   
+                list[a].children[0].checked=todos[a].done     
+            }
+            a++
+            checked_all=true
+        }
+    }else if(checked_all==true){
+        while (a<todos.length) {
+            if (list[a].children[0].id = todos[a].id) {
+                todos[a].done=false   
+                list[a].children[0].checked=todos[a].done     
+            }
+            a++
+            checked_all=false
+        }
+       
+    }
+   
+})
 
 todos.forEach(element=> {
     showTodos(element)
