@@ -76,9 +76,11 @@ todos.forEach(element=> {
 form.addEventListener("submit", function(e){
     e.preventDefault();
     var now= {
-        "name":todo.value
+        "name":todo.value,
+        "id":todos.length+1,
+        "done":false
     }
-    todos.push(now.name);
+    todos.push(now);
     showTodos(now);
     todo.value=""
     
@@ -123,13 +125,28 @@ for(let a = 0; a < list.length; a++) {
     
 }
 
+
+// todos.forEach(tod => {
+//     if (show[0].children[a].children[0].id==tod.id) {
+//         todos.splice(todos.indexOf(tod), 1)
+//         console.log(todos.indexOf(tod));
+//         show[0].children[a].remove()
+//     }
+// });
+
 for(let a = 0; a < list.length; a++) {
-    show[0].children[a].children[1].addEventListener("click", e=>{
-        console.log(show[0].children[a].children[1].id);
-       todos.splice(show[0].children[a].children[1].id-1, 1)
-       show[0].children[a].remove()
-     
-    })
+    list[a].children[1].addEventListener("click", e=>{
+        console.log();
+        todos.forEach(tod => {
+            console.log(todos.indexOf(tod));
+            if (a==todos.indexOf(tod)) {
+                console.log(tod);
+                // todos.splice(todos.indexOf(tod), 1)
+                console.log(todos.indexOf(tod));
+                show[0].children[a].remove()
+            }
+        });
+    });
     
 }
 
