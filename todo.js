@@ -124,9 +124,7 @@ function remove(id){
 }
 }
 
-// todos.forEach(element => {
-//     console.log(todos.indexOf(element))
-// });
+
 
 function showTodos(data, i){
     if (data.done==true) {
@@ -142,42 +140,7 @@ function showTodos(data, i){
   
 }
 
-// for(let a = 0; a < list.length; a++) {
-//     show[0].children[a].children[0].addEventListener("input", e=>{
-//         console.log(show[0].children[a].children[0].checked);
-//         todos.forEach(todo => {
-//             if (show[0].children[a].children[0].id==todo.id) {
-//                 todo.done=show[0].children[a].children[0].checked;
-//             }
-//         });
-//     })
-    
-// }
 
-
-// todos.forEach(tod => {
-//     if (show[0].children[a].children[0].id==tod.id) {
-//         todos.splice(todos.indexOf(tod), 1)
-//         console.log(todos.indexOf(tod));
-//         show[0].children[a].remove()
-//     }
-// });
-
-// for(let a = 0; a < list.length; a++) {
-//     list[a].children[1].addEventListener("click", e=>{
-//         console.log();
-//         todos.forEach(tod => {
-//             console.log(todos.indexOf(tod));
-//             if (a==todos.indexOf(tod)) {
-//                 console.log(tod);
-//                 // todos.splice(todos.indexOf(tod), 1)
-//                 console.log(todos.indexOf(tod));
-//                 show[0].children[a].remove()
-//             }
-//         });
-//     });
-    
-// }
 
 
 
