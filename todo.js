@@ -44,30 +44,30 @@ var checked_all = false;
 
 
 
-// check_all.addEventListener('click', e=>{
-//     let a=0;
-//     if (checked_all==false) {
-//         while (a<todos.length) {
-//             if (list[a].children[0].id = todos[a].id) {
-//                 todos[a].done=true   
-//                 list[a].children[0].checked=todos[a].done     
-//             }
-//             a++
-//             checked_all=true
-//         }
-//     }else if(checked_all==true){
-//         while (a<todos.length) {
-//             if (list[a].children[0].id = todos[a].id) {
-//                 todos[a].done=false   
-//                 list[a].children[0].checked=todos[a].done     
-//             }
-//             a++
-//             checked_all=false
-//         }
+check_all.addEventListener('click', e=>{
+    let a=0;
+    if (checked_all==false) {
+        while (a<todos.length) {
+            if (list[a].children[0].id = todos[a].id) {
+                todos[a].done=true   
+                list[a].children[0].checked=todos[a].done     
+            }
+            a++
+            checked_all=true
+        }
+    }else if(checked_all==true){
+        while (a<todos.length) {
+            if (list[a].children[0].id = todos[a].id) {
+                todos[a].done=false   
+                list[a].children[0].checked=todos[a].done     
+            }
+            a++
+            checked_all=false
+        }
        
-//     }
+    }
    
-// })
+})
 
 // todos.forEach(element=> {
 //     showTodos(element)
