@@ -69,9 +69,6 @@ check_all.addEventListener('click', e=>{
    
 })
 
-// todos.forEach(element=> {
-//     showTodos(element)
-// });
 for (const i in todos) {
     showTodos(todos[i], i)
   
